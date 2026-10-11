@@ -216,6 +216,7 @@ function applyLanguage() {
     <p>测试不预设某种立场优于另一种立场，也不试图用单一标签概括一个人的全部政治观点。结果主要呈现各项原则之间的相对倾向，并保留不同原则相互影响、难以简单归类的情况。</p>
     <p>它更关注你在不同价值发生冲突时如何取舍，而不只是你认同哪些政治口号。</p>
     <p>测试结果仅供自我反思与讨论，不构成对个人政治立场的权威判定。</p>
+    <p>本测试尚未完成，可能有许多不尽如人意之处，甚至有大量疏漏、错误，或者与您的政治观念有较大冲突，请多包涵！如果方便，可以在github留言区谈谈你的改进建议。</p>
   </div>
   <div class="intro-actions"><button class="btn primary" id="startQuizBtn" type="button">确认并开始测试</button></div>
 </section>
@@ -1121,7 +1122,7 @@ window.showResults = function () {
     '平等主义|权威主义': {
       a: '新共和主义/平权运动（赋权派）',
       equal: '公民共和主义（左派）',
-      b: '波拿巴主义'
+      b: '波拿巴主义/阶级调和主义'
     },
 
     '族群主义|权威主义': {
@@ -1163,11 +1164,11 @@ window.showResults = function () {
       .filter(p => scores[p] >= 7);
 
     resultExplanation =
-      '第一名原则达到主导标准，因此以该原则作为主要政治倾向。' +
+      '对你来说，有且只有一个绝对重要的政治原则。' +
       (
         secondaryInfluences.length
           ? ' 次要影响：' + secondaryInfluences.join('、') + '。'
-          : ' 按照本测试的阈值，没有符合条件的次要影响。'
+          : ' 其他原则的影响相对次要。'
       );
   } else if (isMixed) {
 
@@ -1175,8 +1176,8 @@ window.showResults = function () {
     resultCategory = '多原则混合';
 
     resultExplanation =
-      '前四名原则得分全部相同，或第一名与第四名的分差不超过 2 分。' +
-      '因此不强行匹配单一流派名称。';
+      '对你来说，没有一种原则特别重要，不可代替。' +
+      '因此不强行与某一流派对应。';
   } else {
 
     resultCategory = '组合主义';
@@ -1212,11 +1213,11 @@ window.showResults = function () {
       .filter(p => scores[p] >= 7);
 
     resultExplanation =
-      '主要名称依据前两名原则的相对得分匹配，不代表完整思想体系的认定。' +
+      '主要名称依据最重要的两个原则匹配现代的类似主义，不代表完整思想体系的认定。' +
       (
         secondaryInfluences.length
           ? ' 次要影响：' + secondaryInfluences.join('、') + '。'
-          : ' 按照本测试的阈值，没有符合条件的次要影响。'
+          : ' 其他原则的影响相对次要。'
       );
   }
 
