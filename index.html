@@ -11,7 +11,6 @@
 </style>
 
 <style id="mobile-question-navigation-layout">
-/* Mobile only: keep the desktop layout unchanged, and place question navigation after the answering panel. */
 @media (max-width: 760px) {
   #quizLayout {
     display: flex;
@@ -45,6 +44,103 @@
     padding: 6px 0;
     touch-action: manipulation;
   }
+}
+
+@media (max-width: 760px) {
+  #resultPanel[style*="display: block"] {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  #resultPanel > .resulthead {
+    order: 1;
+  }
+
+  #resultPanel > .winner {
+    order: 2;
+  }
+
+  #resultPanel > .resultactions {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #resultPanel > #relativeRanking {
+    order: 4;
+  }
+
+  #resultPanel > .resultsection:has(#interpretation) {
+    order: 5;
+  }
+
+  #resultPanel > .caveat {
+    order: 6;
+  }
+
+  #resultPanel > .resultactions .btn {
+    width: 100%;
+    min-height: 44px;
+  }
+}
+</style>
+
+
+<style id="mobile-title-controls-answer-stability">
+@media (max-width: 760px) {
+
+  .brandname {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 1.12;
+    white-space: normal;
+  }
+  .brandname .brand-line-first,
+  .brandname .brand-line-second {
+    display: block;
+    line-height: 1.12;
+  }
+
+
+  .top-controls {
+    top: 16px !important;
+    right: 8px !important;
+    gap: 6px;
+    align-items: center;
+  }
+  .top-controls button {
+    min-height: 38px;
+    padding: 6px 8px;
+    line-height: 1.2;
+    font-size: 12px;
+  }
+  .brand {
+    padding-right: 150px;
+  }
+
+  .app { padding-top: 10px; }
+  .top { padding-bottom: 10px; }
+  .hero { padding-top: 10px; padding-bottom: 8px; gap: 0; }
+  #quizLayout { gap: 8px; }
+  #quizLayout > .sidebar { padding: 10px 12px; }
+  #quizLayout > #questionPanel { padding: 16px; }
+
+  #questionPanel .question {
+    min-height: 5.2em;
+    margin-bottom: 16px;
+    overflow: visible;
+    overflow-wrap: anywhere;
+  }
+  #questionPanel .choices { gap: 10px; }
+  #questionPanel .choice {
+    min-height: 88px;
+    padding: 14px 16px;
+  }
+  #questionPanel .neutral { min-height: 58px; }
+  #questionPanel .navrow { margin-top: 16px; padding-top: 12px; }
 }
 </style>
 
@@ -91,6 +187,29 @@ html[data-theme="dark"]{color-scheme:dark;--bg:#080d12;--surface:#111a22;--surfa
     }
     return converter;
   }
+
+function updateBrandLayout() {
+  const brand = document.querySelector(".brandname");
+  if (!brand) return;
+
+  const fullTitle = language === "zh-TW"
+    ? "8PrincipalsCN｜政治原則測試"
+    : "8PrincipalsCN|政治原则测试";
+
+  if (window.matchMedia("(max-width: 760px)").matches) {
+    const parts = fullTitle.split(/[|｜]/);
+    brand.replaceChildren();
+    const first = document.createElement("span");
+    first.className = "brand-line-first";
+    first.textContent = parts[0];
+    const second = document.createElement("span");
+    second.className = "brand-line-second";
+    second.textContent = parts.slice(1).join("");
+    brand.append(first, second);
+  } else {
+    brand.textContent = fullTitle;
+  }
+}
 
 function applyLanguage() {
   const convert = getConverter();
@@ -195,13 +314,7 @@ function applyLanguage() {
     ? "8PrincipalsCN｜政治原則測試"
     : "8PrincipalsCN|政治原则测试";
 
-  const brand = document.querySelector(".brandname");
-
-  if (brand) {
-    brand.textContent = language === "zh-TW"
-      ? "8PrincipalsCN｜政治原則測試"
-      : "8PrincipalsCN|政治原则测试";
-  }
+  updateBrandLayout();
 
   document.getElementById("langToggle").textContent =
     language === "zh-TW" ? "简体中文" : "繁體中文";
@@ -241,6 +354,7 @@ function applyLanguage() {
     });
 
     applyLanguage();
+    window.addEventListener("resize", updateBrandLayout);
   });
 
   window.applyQuizLanguage = applyLanguage;
@@ -259,11 +373,11 @@ function applyLanguage() {
   <div class="intro-actions"><button class="btn primary" id="startQuizBtn" type="button">确认并开始测试</button></div>
 </section>
 
-<section class="hero hidden" id="hero"><div><div class="eyebrow">A guided self-assessment</div><h1>当原则彼此冲突，<br>你会优先捍卫<span>什么？</span></h1><p>这不是在问你喜欢哪个标签，而是在具体政治情境中，观察你愿意为哪种价值承担代价。每题选择更接近你判断的一项，也可以选择中立。</p></div><div class="stats"><div class="stat"><strong>08</strong><span>种政治原则</span></div><div class="stat"><strong>28</strong><span>组两两权衡</span></div><div class="stat"><strong>03</strong><span>种回答方式</span></div><div class="stat"><strong>01</strong><span>份个人结果</span></div></div></section>
+<section class="hero hidden" id="hero"><div><div class="eyebrow">A guided self-assessment</div><h1>当它们彼此冲突时，<br>你会捍卫<span>什么？</span></h1><p>这不是在问你喜欢哪个标签，而是在具体政治情境中，观察你愿意为哪种价值承担代价。每题选择更接近你判断的一项，也可以选择中立。</p></div><div class="stats"><div class="stat"><strong>08</strong><span>种政治原则</span></div><div class="stat"><strong>28</strong><span>组两两权衡</span></div><div class="stat"><strong>03</strong><span>种回答方式</span></div><div class="stat"><strong>01</strong><span>份个人结果</span></div></div></section>
 <div class="notice"><strong>作答提示：</strong>请按你认为在冲突中“更应优先”的原则作答，而不是选择听起来更理想的表述。中立表示两者同等重要、需要视情境而定，或你暂时无法判断。</div>
 <div class="layout hidden" id="quizLayout"><aside class="sidebar"><div class="sidehead"><span>作答进度</span><span class="progressnum" id="progressNum">0 / 56</span></div><div class="track"><div class="fill" id="progressFill"></div></div><div class="sidehead"><span>题目导航</span><span class="eyebrow">Q01—56</span></div><div class="navlist" id="navlist"></div><div class="sidefoot">可以返回修改答案。所有题目均可选择中立。</div></aside>
 <section class="panel" id="questionPanel" aria-live="polite"><div class="qmeta"><span id="qnum">问题 01 / 56</span><span class="pill" id="pair1">民主主义</span><span class="vs">VS</span><span class="pill" id="pair2">自由主义</span></div><h2 class="question" id="qtext"></h2><div class="choices" id="choices"></div><div class="navrow"><button class="btn" id="prevBtn">← 上一题</button><div class="hint" id="hint">选择一个最接近你判断的答案</div><button class="btn primary" id="nextBtn">下一题 →</button></div></section></div>
-<section class="panel result" id="resultPanel"><div class="resulthead"><div class="eyebrow">YOUR POLITICAL VALUES PROFILE</div><h2>你的原则排序</h2><p>结果来自你在具体冲突情境中的价值权衡。它反映的是本测试所定义的八种原则之间的相对优先级，而不是对你政治立场的完整描述。</p></div><div class="winner"><small>你的核心政治原则</small><h3 id="winnerName"></h3><p id="winnerDesc"></p></div><div class="resultsection"><h3>八种原则得分</h3><p>选择某一方，该原则 +1、另一方 −1；选择中立，双方均记 0。得分范围为-14到+14。横条右侧代表正分，左侧代表负分。</p><div class="scores" id="scores"></div></div><div class="resultsection"><h3>如何理解你的结果</h3><p id="interpretation"></p></div><div class="caveat">方法说明：这是一份探索性自我评估，不是经过心理测量学验证的量表。题目措辞、具体情境和原则定义都会影响结果。族群主义在本测试中指重视族群／地区的集体认同与自主，并不预设特定民族主义立场；宗教主义指宗教原则对公共生活的规范优先性。</div><div class="resultactions"><button class="btn primary" id="restartBtn">重新作答</button><button class="btn" id="reviewBtn">查看并修改答案</button><button class="btn" id="exportImageBtn">导出结果图片</button></div></section>
+<section class="panel result" id="resultPanel"><div class="resulthead"><div class="eyebrow">YOUR POLITICAL VALUES PROFILE</div><h2>你的原则排序</h2><p>结果来自你在具体冲突情境中的价值权衡。它反映的是本测试所定义的八种原则之间的相对优先级，而不是对你政治立场的完整描述。</p></div><div class="winner"><small>你的核心政治原则最接近</small><h3 id="winnerName"></h3><p id="winnerDesc"></p></div><div class="resultsection"><h3>八种原则得分</h3><p>选择某一方，该原则 +1、另一方 −1；选择中立，双方均记 0。得分范围为-14到+14。横条右侧代表正分，左侧代表负分。</p><div class="scores" id="scores"></div></div><div class="resultsection"><h3>如何理解你的结果</h3><p id="interpretation"></p></div><div class="caveat">方法说明：这是一份娱乐性的政治测试，不是经过严格验证的量表。题目措辞、具体情境和原则定义都会影响结果。族群主义在本测试中指重视族群／地区的集体认同与自主，并不预设特定民族主义立场；宗教主义指宗教原则对公共生活的规范优先性。</div><div class="resultactions"><button class="btn primary" id="restartBtn">重新作答</button><button class="btn" id="reviewBtn">查看并修改答案</button><button class="btn" id="exportImageBtn">导出结果图片</button></div></section>
 <footer class="footer"><span>政治原则测试 · 价值权衡，而非身份标签</span><span>你的答案只在当前页面内计算，不会提交到服务器。</span></footer>
 </div></main>
 
@@ -327,9 +441,9 @@ const questionGroups = [
   },
   {
     pair: ["自由主义", "权威主义"],
-    q1: "应当塑造怎样的公共权力？",
-    a1: "必须受到个人自由与基本权利的严格约束。",
-    b1: "应当拥有足够的自主性与强制力，在必要时刻能够力挽狂澜",
+    q1: "公共权力应当被塑造为何种形态，具备何种程度的能力？",
+    a1: "必须受到个人自由与基本权利的严格约束，起到调节作用",
+    b1: "应当拥有一定的自主性与强制力，在必要时刻能够力挽狂澜",
     q2: "社会面临突发的严重危机，如恐怖主义袭击时，政府是否可以为了维护社会秩序与国家安全，限制个人的言论、集会和行动自由？",
     a2: "政府也必须严格限制自身权力，对公民自由的侵犯永远是不正当的。",
     b2: "危机要求政府挺身而出，特殊情况下对自由的限制是必要的。"
@@ -1199,14 +1313,14 @@ window.showResults = function () {
 
     secondaryInfluences = sorted
       .slice(1, 4)
-      .filter(p => scores[p] >= 7);
+      .filter(p => scores[p] >= 6);
 
     resultExplanation =
       '第一名原则达到主导标准，因此以该原则作为主要政治倾向。' +
       (
         secondaryInfluences.length
           ? ' 次要影响：' + secondaryInfluences.join('、') + '。'
-          : ' 按照本测试的阈值，没有符合条件的次要影响。'
+          : ' 对你来说，其他主义的影响相当次要。'
       );
   } else if (isMixed) {
 
@@ -1214,8 +1328,8 @@ window.showResults = function () {
     resultCategory = '多原则混合';
 
     resultExplanation =
-      '前四名原则得分全部相同，或第一名与第四名的分差不超过 2 分。' +
-      '因此不强行匹配单一流派名称。';
+      '前四名的得分相当接近。' +
+      '因此不为你强行匹配某单一流派。';
   } else {
 
     resultCategory = '组合主义';
@@ -1248,14 +1362,14 @@ window.showResults = function () {
 
     secondaryInfluences = sorted
       .slice(2, 4)
-      .filter(p => scores[p] >= 7);
+      .filter(p => scores[p] >= 6);
 
     resultExplanation =
       '主要名称依据前两名原则的相对得分匹配，不代表完整思想体系的认定。' +
       (
         secondaryInfluences.length
           ? ' 次要影响：' + secondaryInfluences.join('、') + '。'
-          : ' 按照本测试的阈值，没有符合条件的次要影响。'
+          : ' 对你来说，其他主义的影响相当次要。'
       );
   }
 
@@ -1598,7 +1712,6 @@ window.showResults = function () {
       core: '核心政治倾向',
       support: '相对支持原则',
       skeptical: '强烈质疑原则',
-      cycle: '非线性排序',
       footer: '本结果仅反映本次测试中的相对取舍，不对各种原则的高低作价值判断'
     };
 
