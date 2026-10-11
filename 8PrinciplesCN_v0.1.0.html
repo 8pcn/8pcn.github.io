@@ -1,0 +1,1846 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>8PrincipalsCN|政治原则测试</title>
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#f4f1eb,#151716);--surface:light-dark(#fffdf8,#202321);--surface2:light-dark(#eeebe3,#292d2a);--text:light-dark(#222522,#f0f1eb);--muted:light-dark(#6e716a,#a9aea5);--line:light-dark(#d9d6cc,#3b403c);--accent:light-dark(#9b352b,#e58a79);--accent-soft:light-dark(#f5e7e2,#432a27);--green:light-dark(#486b58,#9ac8a8)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.65}button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.app{background-color:var(--bg);min-height:100vh;width:100%;padding:28px 20px 48px}.shell{max-width:1050px;margin:0 auto}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:20px}.brand{display:flex;align-items:center;gap:12px}.mark{width:38px;height:38px;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:900;border-radius:9px;letter-spacing:-2px}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:800}.brandname{font-size:16px;font-weight:800;letter-spacing:.01em}.topnote{display:none}.hero{padding:38px 0 26px;display:grid;grid-template-columns:1fr;gap:28px;align-items:end}.hero h1{font-size:clamp(30px,5vw,54px);line-height:1.12;letter-spacing:-.045em;margin:12px 0 18px;max-width:680px}.hero h1 span{color:var(--accent)}.hero p{color:var(--muted);max-width:650px;margin:0}.stats{display:none}.notice{display:none}.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:18px;align-items:start}.sidebar,.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px}.sidebar{padding:18px;position:sticky;top:16px}.sidehead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-weight:800;font-size:13px}.progressnum{color:var(--accent);font-variant-numeric:tabular-nums}.track{height:5px;background:var(--surface2);border-radius:8px;overflow:hidden;margin-bottom:18px}.fill{height:100%;width:0;background:var(--accent);transition:width .2s}.navlist{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.navdot{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:7px;padding:7px 0;font-size:12px}.navdot.current{background:var(--accent);border-color:var(--accent);color:white;font-weight:800}.navdot.done{color:var(--text);background:var(--accent-soft);border-color:var(--accent)}.sidefoot{display:none}.panel{padding:clamp(20px,4vw,38px);min-height:510px}.qmeta{display:none}.pill{border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--surface2)}.vs{display:none}.question{font-size:clamp(21px,3vw,30px);line-height:1.42;letter-spacing:-.025em;margin:0 0 26px}.choices{display:grid;gap:12px}.choice{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;width:100%;min-height:100px;padding:22px 24px;border:1px solid var(--line);border-radius:14px;background:var(--surface);color:var(--text);transition:border-color .15s,background .15s,transform .15s;box-shadow:0 2px 8px #00000008}.choice:hover{border-color:var(--accent);transform:translateY(-1px)}.choice.selected{border-color:var(--accent);background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent)}.letter{flex:0 0 30px;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:900;color:var(--muted)}.choice.selected .letter{background:var(--accent);border-color:var(--accent);color:white}.choicecopy{padding-top:0;width:100%}.choicehead{display:none}.choicetext{display:block;font-size:15px;line-height:1.7;text-align:center}.neutral{justify-content:center;align-items:center;padding:18px 22px;color:var(--muted);font-size:13px;min-height:64px}.neutral .letter{flex-basis:26px;width:26px;height:26px;border-radius:50%}.navrow{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:28px;padding-top:20px;border-top:1px solid var(--line)}.btn{border:1px solid var(--line);border-radius:9px;padding:10px 16px;background:var(--surface);color:var(--text);font-weight:750;font-size:13px}.btn:disabled{opacity:.35;cursor:not-allowed}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn.primary:hover{filter:brightness(1.06)}.hint{display:none}.result{display:none}.resulthead{padding-bottom:22px;border-bottom:1px solid var(--line)}.resulthead h2{font-size:clamp(28px,4vw,42px);line-height:1.2;margin:12px 0}.resulthead p{color:var(--muted);max-width:720px}.winner{background:var(--accent-soft);border:1px solid var(--accent);border-radius:14px;padding:20px;margin:22px 0}.winner small{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800}.winner h3{font-size:27px;margin:4px 0 5px}.winner p{margin:0;font-size:14px}.scores{display:grid;gap:10px;margin:22px 0}.score-row{display:grid;grid-template-columns:112px minmax(0,1fr) 42px;align-items:center;gap:12px;font-size:13px}.score-name{font-weight:750}.bar{height:10px;border-radius:20px;background:var(--surface2);overflow:hidden;display:flex}.barpos{height:100%;background:var(--accent)}.barneg{height:100%;background:var(--muted);opacity:.45}.scoreval{text-align:right;font-variant-numeric:tabular-nums;font-weight:800}.resultsection{margin-top:26px}.resultsection h3{font-size:17px;margin:0 0 8px}.resultsection p{font-size:14px;color:var(--muted)}.caveat{padding:14px;border:1px solid var(--line);border-radius:10px;font-size:12px;color:var(--muted);margin-top:24px}.resultactions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.footer{display:none}.hidden{display:none!important}
+@media(max-width:760px){.app{padding:16px 12px 32px}.hero{grid-template-columns:1fr;padding:28px 0 20px;gap:18px}.layout{grid-template-columns:1fr}.sidebar{position:static;padding:13px}.navlist{grid-template-columns:repeat(7,minmax(0,1fr))}.sidefoot{display:none}.panel{min-height:0;padding:20px}.topnote{display:none}.score-row{grid-template-columns:90px minmax(0,1fr) 32px;gap:8px}.footer{flex-direction:column;gap:4px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head><body><main class="app"><div class="shell">
+<header class="top"><div class="brand"><div class="mark">政</div><div><div class="eyebrow">POLITICAL VALUES / 01</div><div class="brandname">8PrincipalsCN|政治原则测试</div></div></div></header>
+<style>
+
+:root{color-scheme:light;--bg:#f7fafc;--surface:#fff;--surface2:#eaf3f5;--text:#111827;--muted:#52616b;--line:#cbd5dc;--accent:#1769aa;--accent-soft:#dceefb;--green:#18845b}
+html[data-theme="dark"]{color-scheme:dark;--bg:#080d12;--surface:#111a22;--surface2:#1a2a32;--text:#f4f8fb;--muted:#a9bac5;--line:#30424c;--accent:#55a9e8;--accent-soft:#17364a;--green:#55c995}
+.eyebrow{display:none!important}.hero{padding:20px 0 16px;gap:0}.hero h1{font-size:clamp(24px,3.5vw,38px);margin:0 0 8px;letter-spacing:-.025em}.hero p{display:none}.hero>div:first-child:after{content:"Making Choices.";display:block;color:var(--muted);font-size:14px;margin-top:8px}.mark{background:var(--accent);border-radius:4px}.sidebar,.panel{border-radius:6px}.sidebar{padding:14px}.panel{padding:clamp(18px,3vw,30px)}.navdot,.btn{border-radius:4px}.track,.fill{border-radius:2px}.question{font-size:clamp(18px,2.1vw,23px);line-height:1.5;letter-spacing:0;margin-bottom:22px}.choice{border-radius:6px;min-height:104px;padding:20px 24px;box-shadow:none}.choicetext{font-size:17px;line-height:1.65}.letter{border-radius:4px}.neutral{min-height:68px}.winner,.caveat{border-radius:6px}.pill{border-radius:4px}.top{padding-bottom:14px}.top-controls{position:fixed;z-index:20;right:18px;top:12px;display:flex;gap:6px}.top-controls button{background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:4px;padding:6px 10px;font-size:12px;font-weight:700}.top-controls button:hover{border-color:var(--accent)}
+@media(max-width:760px){.top-controls{top:10px;right:10px}.top-controls button{padding:5px 7px;font-size:11px}.brand{padding-right:125px}.hero{padding-top:22px}.question{font-size:19px}.choicetext{font-size:16px}}
+ .fill{background:var(--green)}.progressnum{color:var(--green)}.navdot.done{border-color:var(--green)}
+</style>
+<div class="top-controls" aria-label="显示设置"><button id="langToggle" type="button">繁體中文</button><button id="themeToggle" type="button">切换深色</button></div>
+<style>
+
+.top-controls{gap:10px;right:20px;top:14px}
+.top-controls button{padding:10px 15px;font-size:15px;line-height:1.4;min-height:42px}
+@media(max-width:760px){.top-controls{top:8px;right:8px;gap:7px}.top-controls button{padding:8px 10px;font-size:13px;min-height:38px}.brand{padding-right:155px}}
+</style>
+
+<style>
+.intro-screen{min-height:0;margin:34px auto 0;padding:clamp(24px,5vw,48px);max-width:900px}
+.intro-screen h1{font-size:clamp(27px,4.5vw,42px);line-height:1.25;letter-spacing:-.025em;margin:0 0 24px;color:var(--text)}
+.intro-screen .intro-copy{max-width:760px}
+.intro-screen .intro-copy p{margin:0 0 16px;color:var(--muted);font-size:clamp(15px,1.8vw,17px);line-height:1.9}
+.intro-screen .intro-copy p:last-child{margin-bottom:0}
+.intro-actions{display:flex;justify-content:flex-start;margin-top:30px;padding-top:22px;border-top:1px solid var(--line)}
+.intro-actions .btn{min-width:180px;min-height:46px;font-size:15px}
+@media(max-width:760px){.intro-screen{margin-top:22px;padding:22px 18px}.intro-screen h1{font-size:27px;margin-bottom:20px}.intro-screen .intro-copy p{font-size:15px;line-height:1.85}.intro-actions .btn{width:100%}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.js"></script>
+<script>
+(() => {
+  let language = "zh-CN";
+  let converter = null;
+
+  function getConverter() {
+    if (!converter && window.OpenCC) {
+      converter = OpenCC.Converter({
+        from: "cn",
+        to: "tw"
+      });
+    }
+    return converter;
+  }
+
+function applyLanguage() {
+  const convert = getConverter();
+
+  if (language === "zh-TW" && !convert) {
+    console.error("简繁转换库未加载，请检查网络连接。");
+    return false;
+  }
+
+  const walker = document.createTreeWalker(
+    document.body,
+    NodeFilter.SHOW_TEXT,
+    {
+      acceptNode(node) {
+        const parent = node.parentElement;
+
+        if (
+          !parent ||
+          !node.nodeValue.trim() ||
+          parent.closest(
+            "script,style,noscript,textarea,.top-controls"
+          )
+        ) {
+          return NodeFilter.FILTER_REJECT;
+        }
+
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    }
+  );
+
+  let node;
+
+  while ((node = walker.nextNode())) {
+    if (!node.__languageRecord) {
+      node.__languageRecord = {
+        source: node.nodeValue,
+        output: node.nodeValue
+      };
+    } else if (
+      node.nodeValue !== node.__languageRecord.output
+    ) {
+
+      node.__languageRecord.source = node.nodeValue;
+    }
+
+    const source = node.__languageRecord.source;
+
+    const output = language === "zh-TW"
+      ? convert(source)
+      : source;
+
+    node.__languageRecord.output = output;
+
+    if (node.nodeValue !== output) {
+      node.nodeValue = output;
+    }
+  }
+
+  const attributes = [
+    "title",
+    "aria-label",
+    "alt",
+    "placeholder"
+  ];
+
+  document.querySelectorAll("*").forEach(element => {
+    if (!element.__languageAttributes) {
+      element.__languageAttributes = {};
+    }
+
+    for (const name of attributes) {
+      if (!element.hasAttribute(name)) continue;
+
+      const value = element.getAttribute(name);
+      let record = element.__languageAttributes[name];
+
+      if (!record || value !== record.output) {
+        record = {
+          source: value,
+          output: value
+        };
+
+        element.__languageAttributes[name] = record;
+      }
+
+      const output = language === "zh-TW"
+        ? convert(record.source)
+        : record.source;
+
+      record.output = output;
+
+      if (value !== output) {
+        element.setAttribute(name, output);
+      }
+    }
+  });
+
+  document.documentElement.lang = language;
+
+  document.title = language === "zh-TW"
+    ? "8PrincipalsCN｜政治原則測試"
+    : "8PrincipalsCN|政治原则测试";
+
+  const brand = document.querySelector(".brandname");
+
+  if (brand) {
+    brand.textContent = language === "zh-TW"
+      ? "8PrincipalsCN｜政治原則測試"
+      : "8PrincipalsCN|政治原则测试";
+  }
+
+  document.getElementById("langToggle").textContent =
+    language === "zh-TW" ? "简体中文" : "繁體中文";
+
+  syncThemeButton();
+
+  return true;
+}
+
+  function syncThemeButton() {
+    const dark =
+      document.documentElement.dataset.theme === "dark";
+
+    document.getElementById("themeToggle").textContent =
+      language === "zh-TW"
+        ? (dark ? "切換淺色" : "切換深色")
+        : (dark ? "切换浅色" : "切换深色");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const langButton = document.getElementById("langToggle");
+    const themeButton = document.getElementById("themeToggle");
+
+    langButton.addEventListener("click", () => {
+      language = language === "zh-CN" ? "zh-TW" : "zh-CN";
+      applyLanguage();
+    });
+
+    themeButton.addEventListener("click", () => {
+      const dark =
+        document.documentElement.dataset.theme === "dark";
+
+      document.documentElement.dataset.theme =
+        dark ? "light" : "dark";
+
+      syncThemeButton();
+    });
+
+    applyLanguage();
+  });
+
+  window.applyQuizLanguage = applyLanguage;
+})();
+</script>
+
+<section class="panel intro-screen" id="introScreen" aria-labelledby="introTitle">
+  <h1 id="introTitle">8PrinciplesCN｜政治原则测试</h1>
+  <div class="intro-copy">
+    <p>一个用于探索个人政治倾向的中文测试。</p>
+    <p>与传统政治测试倾向于将受测者归入某种现成的意识形态不同，本测试从八项政治原则出发，通过两两比较，考察不同原则在个人判断中的相对优先级，寻找唯一的最高政治原则。</p>
+    <p>测试不预设某种立场优于另一种立场，也不试图用单一标签概括一个人的全部政治观点。结果主要呈现各项原则之间的相对倾向，并保留不同原则相互影响、难以简单归类的情况。</p>
+    <p>它更关注你在不同价值发生冲突时如何取舍，而不只是你认同哪些政治口号。</p>
+    <p>测试结果仅供自我反思与讨论，不构成对个人政治立场的权威判定。</p>
+  </div>
+  <div class="intro-actions"><button class="btn primary" id="startQuizBtn" type="button">确认并开始测试</button></div>
+</section>
+
+<section class="hero hidden" id="hero"><div><div class="eyebrow">A guided self-assessment</div><h1>当原则彼此冲突，<br>你会优先捍卫<span>什么？</span></h1><p>这不是在问你喜欢哪个标签，而是在具体政治情境中，观察你愿意为哪种价值承担代价。每题选择更接近你判断的一项，也可以选择中立。</p></div><div class="stats"><div class="stat"><strong>08</strong><span>种政治原则</span></div><div class="stat"><strong>28</strong><span>组两两权衡</span></div><div class="stat"><strong>03</strong><span>种回答方式</span></div><div class="stat"><strong>01</strong><span>份个人结果</span></div></div></section>
+<div class="notice"><strong>作答提示：</strong>请按你认为在冲突中“更应优先”的原则作答，而不是选择听起来更理想的表述。中立表示两者同等重要、需要视情境而定，或你暂时无法判断。</div>
+<div class="layout hidden" id="quizLayout"><aside class="sidebar"><div class="sidehead"><span>作答进度</span><span class="progressnum" id="progressNum">0 / 56</span></div><div class="track"><div class="fill" id="progressFill"></div></div><div class="sidehead"><span>题目导航</span><span class="eyebrow">Q01—56</span></div><div class="navlist" id="navlist"></div><div class="sidefoot">可以返回修改答案。所有题目均可选择中立。</div></aside>
+<section class="panel" id="questionPanel" aria-live="polite"><div class="qmeta"><span id="qnum">问题 01 / 56</span><span class="pill" id="pair1">民主主义</span><span class="vs">VS</span><span class="pill" id="pair2">自由主义</span></div><h2 class="question" id="qtext"></h2><div class="choices" id="choices"></div><div class="navrow"><button class="btn" id="prevBtn">← 上一题</button><div class="hint" id="hint">选择一个最接近你判断的答案</div><button class="btn primary" id="nextBtn">下一题 →</button></div></section></div>
+<section class="panel result" id="resultPanel"><div class="resulthead"><div class="eyebrow">YOUR POLITICAL VALUES PROFILE</div><h2>你的原则排序</h2><p>结果来自你在具体冲突情境中的价值权衡。它反映的是本测试所定义的八种原则之间的相对优先级，而不是对你政治立场的完整描述。</p></div><div class="winner"><small>你的核心政治原则</small><h3 id="winnerName"></h3><p id="winnerDesc"></p></div><div class="resultsection"><h3>八种原则得分</h3><p>选择某一方，该原则 +1、另一方 −1；选择中立，双方均记 0。得分范围为-14到+14。横条右侧代表正分，左侧代表负分。</p><div class="scores" id="scores"></div></div><div class="resultsection"><h3>如何理解你的结果</h3><p id="interpretation"></p></div><div class="caveat">方法说明：这是一份探索性自我评估，不是经过心理测量学验证的量表。题目措辞、具体情境和原则定义都会影响结果。族群主义在本测试中指重视族群／地区的集体认同与自主，并不预设特定民族主义立场；宗教主义指宗教原则对公共生活的规范优先性。</div><div class="resultactions"><button class="btn primary" id="restartBtn">重新作答</button><button class="btn" id="reviewBtn">查看并修改答案</button><button class="btn" id="exportImageBtn">导出结果图片</button></div></section>
+<footer class="footer"><span>政治原则测试 · 价值权衡，而非身份标签</span><span>你的答案只在当前页面内计算，不会提交到服务器。</span></footer>
+</div></main>
+
+<script>
+const descriptions={
+"民主主义":"优先强调集体成员通过参与、表达和多数程序决定共同事务。","自由主义":"优先强调个人自由、权利边界与个人自主选择，警惕公共权力或集体意志的过度干预。","权威主义":"优先强调社会责任、长远利益与良好政治判断，而不只把政治理解为偏好计数。","平等主义":"优先强调人们在经济、文化、社会地位和实际生活条件上的实质平等。","社会主义":"优先强调改变生产资料所有制和阶级关系，消除以资本所有权为基础的劳动支配。","族群主义":"优先强调族群或地区的集体认同、文化延续、自主权与共同发展利益。","宗教主义":"优先强调宗教教义或宗教权威对公共法律、社会规范与集体生活的约束力。","宪政主义":"优先强调公共权力受宪法权限、既定程序与制度性约束，即使政策目标本身值得支持。"};
+const questionGroups = [
+  {
+    pair: ["民主主义", "自由主义"],
+    q1: "当多数公民通过民主程序决定限制一项少数人坚持的个人自由时，应该优先尊重多数人的决定，还是保障个人不受多数支配的自由？",
+    a1: "只要程序正当，就应当尊重多数公民的决定。",
+    b1: "某些个人自由不应因多数人的意愿而被剥夺。",
+    q2: "市议会准备安装覆盖全城的公共摄像头。民意调查显示八成居民支持，理由是可以减少盗窃；少数居民担心自己的集会、就医和日常行踪被长期记录。应以什么为先？",
+    a2: "公共安全措施既得到多数居民支持，就应尽快实施，并由民选机构决定监控范围。",
+    b2: "即使多数支持，也应优先保护个人不被持续追踪的自由，不能把隐私交由多数票任意处置。"
+  },
+  {
+    pair: ["民主主义", "权威主义"],
+    q1: "当一项重大公共政策得到多数公民的支持，但反对者认为公众缺乏充分的信息和对政策后果的理解时，应该如何决定？",
+    a1: "只要公民能够自由表达意愿，就应当以多数人的选择作为最终依据。",
+    b1: "重大决定应经过充分审议并考虑长远公共利益，不能仅凭多数人的即时意愿决定。",
+    q2: "一场网络公投要求市政府立即拆除一座有争议的旧桥。投票参与者很多，但多数人没有看过工程报告；拆除可能切断低收入社区通勤路线，也可能避免高额维修费。市政府应如何定夺？",
+    a2: "投票已经表达居民意愿，政府应按多数结果执行，并把后果交由选民评价。",
+    b2: "应尝试征询专业人士的建议，重新考虑成本和受影响群体的意见，经过充分审议后再决定，不能把即时投票等同于可靠判断。"
+  },
+  {
+    pair: ["民主主义", "平等主义"],
+    q1: "当多数人支持一种能提高社会整体财富、但会扩大经济与文化差距的制度时，应该如何选择？",
+    a1: "应当尊重多数人的选择，即使它导致不平等扩大。",
+    b1: "应当优先维护经济与文化平等，即使这意味着违背多数意见。",
+    q2: "地方预算只能在两个方案中选择：为多数选民所在的城区翻新广场，或为人口较少、设施严重不足的边缘社区补齐供水和无障碍道路。后者受益人数少，但能显著改善最差处境。应优先什么？",
+    a2: "预算应主要回应多数居民表达出来的偏好，优先建设他们更希望使用的公共空间。",
+    b2: "应先保障基本服务最不足群体的生活条件，即使多数人更喜欢另一项工程。"
+  },
+  {
+    pair: ["民主主义", "社会主义"],
+    q1: "社会主义者可以在多数人不赞成废除生产资料私有制时，仍然继续为之努力吗？",
+    a1: "未获得多数人的支持，就不应推行这一根本性的所有制变革。",
+    b1: "即使暂时缺乏多数支持，也应继续尝试推动废除生产资料私有制。",
+    q2: "一家大型平台雇用了本地大多数劳动者。多数选民担心国有化会导致短期失业，因此反对改变所有权，怎么办？",
+    a2: "如此重大的所有制变革应以多数人的明确授权为前提，不能只凭一部分人的主张推进。",
+    b2: "应优先改变少数资本所有者对关键生产资源和劳动过程的支配，即使多数人因短期风险暂时反对。"
+  },
+  {
+    pair: ["民主主义", "族群主义"],
+    q1: "当全国多数人支持一项统一政策，而某个少数族群或地区的居民明确反对，并希望自行决定相关事务时，应该如何选择？",
+    a1: "全国性的民主决定应当具有优先效力。",
+    b1: "涉及该族群或地区自身事务时，应优先尊重其集体意愿。",
+    q2: "某省多数选民通过地方公投，要求所有公立学校只使用全国通用语言教学；少数族群家长希望本族语言继续作为授课语言之一，以免下一代失去语言能力。应以什么为先？",
+    a2: "学校制度属于全体人民共同决定的公共事务，应执行多数人支持的统一标准。",
+    b2: "族群有权维护自身语言的代际传承，不能仅由省内多数决定少数群体是否还能在学校学习本族语言。"
+  },
+  {
+    pair: ["民主主义", "宗教主义"],
+    q1: "当多数公民通过民主程序决定废除一项长期存在的宗教传统或宗教法律时，应该如何处理？",
+    a1: "宗教传统和法律应服从民主共同体的决定。",
+    b1: "某些宗教原则不应仅因多数人的决定而被废除。",
+    q2: "市政厅过去每周举行一次面向全体市民的宗教祈祷仪式。新一届民选议会以公共机构应保持中立为由投票取消；当地信徒认为参与仪式是共同体延续信仰的重要实践。应如何取舍？",
+    a2: "公共机构的仪式安排应服从民主共同体的决定，长期传统不能因此获得永久豁免。",
+    b2: "如果仪式承载核心宗教义务，就不应仅因多数更替而取消，应优先尊重信仰规范。"
+  },
+  {
+    pair: ["自由主义", "权威主义"],
+    q1: "公共权力应当受到个人自由与权利的严格限制，还是应当拥有足够的自主性与强制力，以维护整体秩序、实现集体目标？",
+    a1: "公共权力必须受到个人自由与基本权利的约束；集体目标不能成为政府任意支配个人的理由。",
+    b1: "公共权力应当拥有足够的自主性与强制力，在必要时刻可以将集体秩序、共同目标或政治权威置于个人自由之上。",
+    q2: "社会面临突发的严重危机，如恐怖主义袭击时，政府是否可以为了维护社会秩序与国家安全，限制个人的言论、集会和行动自由？",
+    a2: "即使面临严重危机，政府也必须严格限制自身权力，对公民自由的侵犯永远是不正当的。",
+    b2: "严重危机要求政府挺身而出，特殊情况下对自由的限制是必要的。"
+  },
+  {
+    pair: ["自由主义", "平等主义"],
+    q1: "当个人自由会使经济或文化差距持续扩大时，社会是否应限制一部分人的选择，以保障所有人获得更平等的生活条件和社会地位？",
+    a1: "应优先保障个人自由，即使这会导致不平等。",
+    b1: "可以限制部分个人选择，以减少经济与文化不平等。",
+    q2: "一座城市允许家庭自由购买学区房。几年后，最好的学校几乎只招收高房价社区的孩子，其他学校则持续缺乏教师和设备。政府考虑限制学区房溢价并重新分配教育资源。应优先什么？",
+    a2: "家庭应保有按自身意愿选择住所和教育环境的自由，不能因结果不均等就轻易限制选择。",
+    b2: "应优先保证儿童获得较为平等的教育条件，即使需要限制房产交易优势并重新分配资源。"
+  },
+  {
+    pair: ["自由主义", "社会主义"],
+    q1: "当私人占有生产资料使资本所有者能够凭借所有权长期支配他人的劳动时，是否应当废除这种所有权关系？",
+    a1: "应保障个人持有和使用生产资料的自由，即使由此产生雇佣劳动关系。",
+    b1: "应废除生产资料私有制，以消除以所有权为基础的阶级支配。",
+    q2: "一家矿区只有两家雇主，附近住房、交通和医疗也由雇主控制。工人可以在法律上辞职，却可能因此失去住所和基本服务。是否只要合同自愿，就足以证明劳动关系自由？",
+    a2: "只要劳动者可以签约、拒绝或更换雇主，制度就应把合同选择自由放在首位。",
+    b2: "应改变生产资料与生活资源高度集中于雇主的结构，否则形式上的辞职权无法消除劳动者对资本的依赖。"
+  },
+  {
+    pair: ["自由主义", "族群主义"],
+    q1: "当个人希望放弃所属族群的语言、传统或身份认同，而该族群认为这些文化必须通过集体行动加以维护时，应该如何选择？",
+    a1: "个人有权自由选择、改变或放弃自己的族群身份。",
+    b1: "族群有权采取一定的集体措施维护文化延续，即使这会限制部分个人选择。",
+    q2: "某少数族群协会规定，获得补助的家庭必须在公共活动中使用本族语言。协会称这是维持语言环境的唯一办法；一位成员因工作和家庭需要，想改用当地通用语言。应优先什么？",
+    a2: "个人有权选择日常使用的语言，不应因领取社区补助而被要求遵守统一的身份表达。",
+    b2: "族群共同体可以把有限的公共支持用于维持本族语言环境，即使这会限制部分成员的语言选择。"
+  },
+  {
+    pair: ["自由主义", "宗教主义"],
+    q1: "当个人自由选择的生活方式与某一宗教的核心教义发生冲突时，社会法律应以什么为优先？",
+    a1: "应保障个人选择生活方式的自由，宗教教义不应强制适用于所有人。",
+    b1: "宗教教义应当对公共法律和社会行为规范具有优先约束力。",
+    q2: "一名成年女性决定离开家族所属宗教，并希望自行选择婚姻对象。宗教共同体不要求国家惩罚她，却主张公共机构应承认其教义规定的婚姻资格和成员义务。法律应如何取舍？",
+    a2: "个人应能退出宗教并自主决定婚姻，宗教共同体不能把信仰义务转化为普遍法律约束。",
+    b2: "公共制度应尽可能承认宗教共同体依教义安排婚姻和成员义务的规范权。"
+  },
+  {
+    pair: ["权威主义", "平等主义"],
+    q1: "当某些公民在政治知识、公共事务经验和判断能力方面存在明显差异时，应当如何对待这种差异？",
+    a1: "所有成员都应享有平等的政治地位与参与机会；不能因为知识、经验的差距而形成政治参与上的高低差别。",
+    b1: "必须充分考虑参与者的知识、经验，让负责任心的专业人才和机构发挥更多作用能更好维护群体利益。",
+    q2: "某落后的农业国家为了加速工业化，需要集中资源发展重工业。政府试图通过集中部分行业资源的方式完成，即便这可能导致各群体收入差距维持甚至扩大？",
+    a2: "必须要保障平等发展的条件，长远利益不能成为破坏社会公平的理由。",
+    b2: "要优先保障国家和产业的长远发展，此时工业化任务应当放在首位。"
+  },
+  {
+    pair: ["权威主义", "社会主义"],
+    q1: "应如何组织生产、分配资源与作出集体决策，才能兼顾社会整体发展与劳动人民的主体地位？",
+    a1: "应由劳动人民共同掌握生产资料，并实质性地参与生产管理与社会决策。",
+    b1: "由统一并受认可的领导核心集中协调生产与资源分配，以实现整体利益和长远发展。",
+    q2: "工厂改为职工集体所有后，职工大会每周都要决定采购、排班和技术调整，订单大量延误；管理团队建议暂时保留专业管理权限，但这会让部分决策权重新集中起来。应以什么为先？",
+    a2: "应优先让劳动者掌握生产资料和生产决策，不能因初期效率下降就恢复少数人对部分生产环节的支配。",
+    b2: "应优先保障生产效率与社会效益，允许专业团队在明确授权下集中决策，反而可以避免因过度分散决策而影响集体利益。"
+  },
+  {
+    pair: ["权威主义", "族群主义"],
+    q1: "当国家的发展政策与某个族群维护自身文化、习俗和自治权的诉求发生分歧时，应以什么为先？",
+    a1: "优先保障族群的集体认同与文化自主权，避免以国家统一为由压制特殊诉求。",
+    b1: "优先维护统一的政治秩序与国家整体利益，必要时要求地方族群服从统一政策。",
+    q2: "某族群自治委员会长期由几个家族轮流担任代表。委员会声称外部干预会破坏族群自主，但年轻人和女性成员无法查阅账目，也不能挑战代表人选。应如何选择？",
+    a2: "外部制度不应轻易规定族群内部如何选出代表，应优先尊重共同体自主安排内部事务的权利。",
+    b2: "自治机构内部的权力也应接受成员监督、公开审议和问责，不能以集体自主为由免除内部成员的参与权。"
+  },
+  {
+    pair: ["权威主义", "宗教主义"],
+    q1: "某宗教的经典长期禁止某种仪式，但宗教组织的最高领导机构认为，随着时代变化，应重新解释经典并允许该仪式。信众应如何看待这一决定？",
+    a1: "应以传统教义为根本依据，不能仅因宗教组织的官方决定就改变对经典的理解。",
+    b1: "宗教组织有责任结合时代处境解释教义，在权威认可下作出的改革可以被接受。",
+    q2: "某国政府要求所有公职人员在国家纪念仪式上宣誓效忠国家，但某宗教认为，信徒只能向神作出最高效忠承诺。公职人员应如何选择？",
+    a2: "宗教信仰具有更高的约束力，不能为了服从国家权威而违背信仰原则。",
+    b2: "国家有权要求公职人员履行维护国家统一与公共利益的义务，宗教信仰不应凌驾于国家责任之上。"
+  },
+  {
+    pair: ["平等主义", "社会主义"],
+    q1: "假设一个社会已经废除生产资料私有制，但仍然存在显著的收入差距、文化等级和社会地位差异。是否可以认为这一社会已经实现了足够重要的进步？",
+    a1: "可以。废除生产资料私有制、消除阶级关系是最根本的目标，其他差异可以逐步处理。",
+    b1: "不可以。即使生产资料已经公有化，也必须继续消除经济与文化上的实质不平等。",
+    q2: "政府通过高额税收和现金补贴，把收入差距明显缩小；但大型企业仍由私人股东控制，工人不能决定投资、生产目标和工作节奏。哪项判断更接近你的立场？",
+    a2: "仅靠再分配还不足以消除阶级关系，应继续改变生产资料所有制和劳动支配结构。",
+    b2: "如果再分配能长期保障实质平等、公共服务和生活尊严，所有制变革不必自动排在所有政策之前。"
+  },
+  {
+    pair: ["平等主义", "族群主义"],
+    q1: "当某个族群要求优先获得公共资源、文化保护或政治代表权，以弥补历史上的不利处境，但这会造成不同族群之间的差别待遇时，应该如何选择？",
+    a1: "可以给予特定族群差异化待遇，以维护其集体权利并纠正历史不平等。",
+    b1: "应优先保障不同族群成员之间的平等地位，避免形成基于族群身份的差别待遇。",
+    q2: "某族群长期被排除在公务员晋升和公共媒体之外。政府提议在一定年限内为其保留部分代表名额；反对者认为所有申请人都应按同一标准竞争。应优先什么？",
+    a2: "应设置集体代表保障，以纠正长期排斥并使该族群能够参与影响自身的决定。",
+    b2: "公共职位应优先依据统一标准向每个人平等开放，避免把族群身份变成决定个人机会的依据。"
+  },
+  {
+    pair: ["平等主义", "宗教主义"],
+    q1: "当一种宗教传统规定不同性别、出身或社会身份的人享有不同权利或承担不同义务时，是否应当保留这些规定？",
+    a1: "应尊重宗教传统，即使它包含不同身份之间的差异。",
+    b1: "应优先保障所有人的平等权利，即使这要求改革宗教传统。",
+    q2: "一所宗教学校因教义要求男生学习工程、女生学习家政，学校称家长自愿选择且传统不可更改；学生则希望课程和升学机会不因性别而不同。应如何取舍？",
+    a2: "应尊重宗教学校依其信仰安排教育内容的权利，即使不同性别接受不同课程。",
+    b2: "应优先保障学生平等获得知识、资格和升学机会，宗教传统需要在这些要求面前作出调整。"
+  },
+  {
+    pair: ["社会主义", "族群主义"],
+    q1: "当一个民族国家或地区希望通过保护本地私人企业、限制外来资本或维护本地所有者的利益来实现自身发展，而这些措施会延续生产资料私有制和阶级关系时，应该如何选择？",
+    a1: "应优先维护该民族国家或地区的经济自主与集体发展利益。",
+    b1: "应优先推动废除生产资料私有制、消除阶级关系，即使这会限制部分地方性经济利益。",
+    q2: "本地企业主和工会共同要求优先雇用本族群居民，并限制外地劳动者进入；他们称这样可以维护社区稳定，但企业仍可压低所有工人的工资。应以什么为先？",
+    a2: "应优先维护本地族群的就业机会和经济自主，即使需要对外来劳动者设置限制。",
+    b2: "应优先改变雇主压低工资、分化劳动者的结构，不应让族群身份取代劳动者共同利益成为首要界线。"
+  },
+  {
+    pair: ["社会主义", "宗教主义"],
+    q1: "当宗教组织拥有大量土地、企业等生产资料，并依据宗教权威决定其使用方式时，是否应将这些生产资料纳入社会所有？",
+    a1: "应尊重宗教组织的所有权与自治，即使这意味着保留部分非社会主义所有制。",
+    b1: "应推动废除生产资料私有制，宗教组织不应因其宗教身份而获得特殊豁免。",
+    q2: "一所宗教医院由教会拥有，雇员没有参与预算和工作规则的渠道；管理层以捐赠者意愿和宗教自治为由拒绝职工代表进入董事会。应如何看待？",
+    a2: "宗教机构应优先保有依其信仰和捐赠条件安排内部财产与劳动管理的权利。",
+    b2: "雇员的劳动权利和对工作条件的集体参与不应因机构宗教身份而被排除，应推动生产与管理关系更加社会化。"
+  },
+  {
+    pair: ["族群主义", "宗教主义"],
+    q1: "当某个民族或地区的历史文化传统与其主流宗教的要求发生冲突时，应该以什么作为公共制度和集体生活的主要依据？",
+    a1: "应优先维护该民族或地区自身的历史文化、集体认同与自主决定权。",
+    b1: "应优先遵循宗教教义，即使这要求改变部分历史文化传统。",
+    q2: "某地区的传统成年礼包含宗教权威认为不合教义的仪式。地方长老希望保留它，因为这是本族群确认成员身份的方式；宗教机构要求停止。应优先什么？",
+    a2: "应优先维护族群自身的历史实践和文化延续，由共同体成员决定如何改革传统。",
+    b2: "应优先遵循宗教教义，即使这意味着停止或改造部分族群传统。"
+  },
+  {
+    pair: ["宪政主义", "民主主义"],
+    q1: "当多数公民通过民主程序，明确要求政府采取一项违反现行宪法限制的措施时，应该如何选择？",
+    a1: "应尊重多数人的民主决定，必要时可以突破现行宪法限制。",
+    b1: "应遵守宪法规定的权限与程序，即使这意味着暂时不能执行多数人的意愿。",
+    q2: "一名独立监察专员依法任职五年，任期尚余两年。因其调查了多数选民支持的市长项目，民众发起罢免请愿；现行法律规定只能在严重失职并经听证后罢免。应以什么为先？",
+    a2: "如果多数选民明确反对该专员，就应尽快让民意决定其去留。",
+    b2: "应遵守既定任期与罢免程序，避免监督机关因不受欢迎的调查而被多数意志随意撤换。"
+  },
+  {
+    pair: ["宪政主义", "自由主义"],
+    q1: "某些法律在事实上对人的自由产生了限制，是否应当允许通过非法律途径捍卫这种自由？",
+    a1: "为了保障个人自由及其实际实现，必要时可以突破现行法律的限制。",
+    b1: "即使目标是保护个人自由，也应当遵从程序。",
+    q2: "发生针对少数群体的暴力后，政府想临时授权警方未经通常审批就封锁通信平台、调取用户记录。政府称这是为了保护受威胁者，但措施也可能被用于打击合法抗议。怎么办？",
+    a2: "在保护人身自由和安全迫在眉睫时，政府可以暂时越过通常权限限制。",
+    b2: "即使目标是保护自由和安全，政府也应遵守授权范围、司法审查和法定程序，不能自行扩权。"
+  },
+  {
+    pair: ["宪政主义", "权威主义"],
+    q1: "当一位得到广泛信任、具有丰富公共事务经验的领导者认为，某项紧急改革受到程序性阻碍时，应该如何选择？",
+    a1: "如果领导者有充分理由认为改革符合公共利益，可以暂时搁置部分程序。",
+    b1: "无论领导者的判断如何，公共权力都必须受到法律的约束。",
+    q2: "一座城市的公共交通系统连续发生事故。市长提出让经验丰富的应急委员会直接接管采购和运营，暂停公开招标与议会审查三个月；委员会成员被认为专业可靠，但也可能偏袒熟悉的供应商。应如何选择？",
+    a2: "面对紧急公共问题，应允许具备专业判断的机构暂时绕过繁复程序，以公共利益为先。",
+    b2: "越是紧急，越应保留采购透明、审查和责任追究等约束，不能只凭决策者自称专业可靠就暂停监督。"
+  },
+  {
+    pair: ["宪政主义", "平等主义"],
+    q1: "当现行宪法保护某些财产、文化传统或社会组织形式，而这些制度持续造成显著的经济与文化不平等时，应该如何选择？",
+    a1: "为了消除根深蒂固的不平等，可以突破现行宪法对这些制度的保护。",
+    b1: "应通过宪法规定的修订与变革程序消除不平等，而不应随意突破既定限制。",
+    q2: "政府拟在一年内大规模扩建保障性住房，但方案需要征收部分私人土地，现行宪法要求独立评估、听证和补偿。住房短缺正在恶化，程序预计会拖慢建设。应以什么为先？",
+    a2: "面对严重住房不平等，应尽快扩大公共住房供给，必要时可以绕过现有宪法保护。",
+    b2: "应通过法定征收、补偿和审查程序推进住房改革，不能因为目标正当就让政府自行决定何时越过限制。"
+  },
+  {
+    pair: ["宪政主义", "社会主义"],
+    q1: "现行宪法保障生产资料私有制，而社会主义者认为废除这一制度是迈向无阶级社会的必要条件时，应该如何选择？",
+    a1: "如果法律阻碍废除生产资料私有制，那就采用法律之外的手段。",
+    b1: "即使目标是废除生产资料私有制，也必须尊重法制制度。",
+    q2: "新政府获得明确选举授权，准备把能源、铁路和大型银行转为社会所有；现行宪法规定必须经过两院特别多数、司法审查及补偿程序，而反对党可以利用程序长期拖延。应优先什么？",
+    a2: "应优先改变关键生产资料的所有权和资本支配，不能让现行程序成为延续阶级关系的永久屏障。",
+    b2: "即使变革具有广泛支持，也应遵守宪法规定的权限与程序，通过制度化方式完成所有制转变。"
+  },
+  {
+    pair: ["宪政主义", "族群主义"],
+    q1: "当某个民族、少数族群或地区要求立即实行自治、改变政治地位或重新分配地方权力，但这些要求与现行宪法相冲突时，应该如何选择？",
+    a1: "应优先满足该族群或地区的集体意愿，必要时可以突破现行宪法限制。",
+    b1: "应通过宪法规定的程序解决自治与政治地位问题，即使这会延缓诉求的实现。",
+    q2: "某地区举行地方公投，要求立即独立并接管边境、税收和警务；全国宪法规定政治地位变更须经过谈判、公投及全国性批准。支持者担心程序会被中央无限拖延。应如何取舍？",
+    a2: "应优先承认当地居民表达的集体自决要求，必要时可不等待现行宪法程序完成。",
+    b2: "应依照宪法程序处理地位变更，同时要求程序有明确期限和可监督的保障，不能以单方面行动取代制度约束。"
+  },
+  {
+    pair: ["宪政主义", "宗教主义"],
+    q1: "当宗教权威认为某项宗教义务高于现行宪法规定，并要求国家机关据此采取行动时，应该如何选择？",
+    a1: "当宗教义务与宪法发生根本冲突时，应优先遵循宗教原则。",
+    b1: "国家机关必须遵守宪法规定的权限与程序，即使这与宗教权威的要求冲突。",
+    q2: "宗教委员会要求国家机关拒绝为某些公民办理法律认可的婚姻登记，理由是其教义不承认这种结合；宪法则保障公民平等适用婚姻法的权利。应以什么为先？",
+    a2: "国家应优先承认宗教教义对婚姻制度的规范地位，并据此调整公共服务。",
+    b2: "国家机关必须依宪法保障的权利和权限边界办事，不能仅凭宗教要求拒绝公民享有法定权利。"
+  }
+];
+
+(() => {
+
+  const expandedQuestions = questionGroups.flatMap(
+    (group, groupIndex) => [
+      {
+        pair: [...group.pair],
+        q: group.q1,
+        a: group.a1,
+        b: group.b1,
+        scoreA: group.pair[0],
+        scoreB: group.pair[1],
+        groupIndex,
+        detail: 1
+      },
+      {
+        pair: [...group.pair],
+        q: group.q2,
+        a: group.a2,
+        b: group.b2,
+        scoreA: group.pair[0],
+        scoreB: group.pair[1],
+        groupIndex,
+        detail: 2
+      }
+    ]
+  );
+
+  const principles = Object.keys(descriptions);
+  const total = expandedQuestions.length;
+
+  if (total !== 56) {
+    console.error(`题目数量异常：预期 56 道，实际 ${total} 道。`);
+  }
+
+  const participation = Object.fromEntries(
+    principles.map(p => [p, 0])
+  );
+
+  for (const q of expandedQuestions) {
+    if (
+      !q.pair ||
+      q.pair.length !== 2 ||
+      !principles.includes(q.scoreA) ||
+      !principles.includes(q.scoreB) ||
+      q.scoreA === q.scoreB
+    ) {
+      console.error("题目配置错误：", q);
+      continue;
+    }
+
+    participation[q.scoreA]++;
+    participation[q.scoreB]++;
+  }
+
+  for (const p of principles) {
+    if (participation[p] !== 14) {
+      console.error(
+        `原则「${p}」参与了 ${participation[p]} 道题，预期为 14 道。`
+      );
+    }
+  }
+
+  const DATA = {
+    principles,
+    questions: expandedQuestions
+  };
+
+  const answers = {};
+  let current = 0;
+
+  window.DATA = DATA;
+  window.answers = answers;
+
+  Object.defineProperty(window, "current", {
+    configurable: true,
+    enumerable: true,
+    get: () => current,
+    set: value => {
+      if (
+        Number.isInteger(value) &&
+        value >= 0 &&
+        value < total
+      ) {
+        current = value;
+      }
+    }
+  });
+
+  window.quizAnswers = answers;
+  window.quizQuestions = expandedQuestions;
+
+  const $ = id => document.getElementById(id);
+  window.$ = $;
+
+  const nav = $("navlist");
+
+  const NEUTRAL_TEXT =
+    "中立：两者同等重要，或者都不重要，或需要视具体情况判断。";
+
+  const wordingEdits = [
+    [/应该如何选择？/g, "应以什么为先？"],
+    [/应该如何处理？/g, "应如何取舍？"],
+    [/应该如何决定？/g, "应如何定夺？"],
+    [/应该如何看待？/g, "应如何判断？"],
+    [/应该如何推进？/g, "应如何推进？"],
+    [/哪项原则应优先？/g, "应优先考虑什么？"],
+    [/哪一原则更应优先？/g, "应优先考虑哪一方？"],
+    [
+      /应该以什么作为公共制度和集体生活的主要依据？/g,
+      "公共制度与集体生活应主要依据什么？"
+    ]
+  ];
+
+  for (const q of expandedQuestions) {
+    for (const field of ["q", "a", "b"]) {
+      if (typeof q[field] !== "string") continue;
+
+      for (const [pattern, replacement] of wordingEdits) {
+        q[field] = q[field].replace(pattern, replacement);
+      }
+    }
+  }
+
+  for (let i = total - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [expandedQuestions[i], expandedQuestions[j]] = [
+      expandedQuestions[j],
+      expandedQuestions[i]
+    ];
+  }
+
+  const layoutStyle = document.createElement("style");
+
+  layoutStyle.textContent = `
+    .question {
+      font-size: clamp(17px, 1.8vw, 21px);
+    }
+
+    @media (min-width: 761px) {
+      .choices {
+        max-width: 760px;
+        margin-inline: auto;
+      }
+
+      .choice {
+        max-width: 100%;
+      }
+    }
+  `;
+
+  document.head.appendChild(layoutStyle);
+
+  nav.innerHTML = "";
+
+  expandedQuestions.forEach((q, i) => {
+    const button = document.createElement("button");
+
+    button.type = "button";
+    button.className = "navdot";
+    button.textContent = String(i + 1).padStart(2, "0");
+    button.title = `跳转到第 ${i + 1} 题`;
+
+    button.addEventListener("click", () => {
+      current = i;
+      renderQuestion();
+    });
+
+    nav.appendChild(button);
+  });
+
+  function renderQuestion() {
+    const q = expandedQuestions[current];
+
+    if (!q) {
+      console.error("无法找到当前题目：", current);
+      return;
+    }
+
+    $("qnum").textContent =
+      `问题 ${String(current + 1).padStart(2, "0")} / ${total}`;
+
+    $("pair1").textContent = q.pair[0];
+    $("pair2").textContent = q.pair[1];
+    $("qtext").textContent = q.q;
+    $("choices").innerHTML = "";
+
+    const options = [
+      ["A", q.a],
+      ["B", q.b],
+      ["N", NEUTRAL_TEXT]
+    ];
+
+    for (const [key, label] of options) {
+      const selected = answers[current] === key;
+      const button = document.createElement("button");
+
+      button.type = "button";
+      button.className =
+        "choice" +
+        (selected ? " selected" : "") +
+        (key === "N" ? " neutral" : "");
+
+      button.setAttribute("aria-pressed", String(selected));
+
+      const letter = document.createElement("span");
+      letter.className = "letter";
+      letter.textContent = key === "N" ? "—" : key;
+
+      const copy = document.createElement("span");
+      copy.className = "choicecopy";
+
+      const text = document.createElement("span");
+      text.className = "choicetext";
+      text.textContent = label;
+
+      copy.appendChild(text);
+      button.append(letter, copy);
+
+      button.addEventListener("click", () => {
+        const answeredIndex = current;
+        answers[answeredIndex] = key;
+
+        if (answeredIndex < total - 1) {
+          current = answeredIndex + 1;
+          renderQuestion();
+         return;
+       }
+
+        if (typeof window.showResults === "function") {
+         window.showResults();
+        } else {
+         renderQuestion();
+         console.error("结果函数尚未加载：window.showResults");
+       }
+      });
+
+      $("choices").appendChild(button);
+    }
+
+    $("prevBtn").disabled = current === 0;
+
+    $("nextBtn").textContent =
+      current === total - 1 ? "查看结果 →" : "下一题 →";
+
+    $("hint").textContent =
+      answers[current] === undefined
+        ? "选择一个最接近你判断的答案"
+        : "已选择：" +
+          (answers[current] === "N" ? "中立" : answers[current]);
+
+    const answered = Object.keys(answers).length;
+
+    $("progressNum").textContent = `${answered} / ${total}`;
+    $("progressFill").style.width =
+      `${answered / total * 100}%`;
+
+    [...nav.children].forEach((button, i) => {
+      button.classList.toggle("current", i === current);
+      button.classList.toggle("done", answers[i] !== undefined);
+    });
+
+    const navLabel = document.querySelector(
+      ".sidehead .eyebrow"
+    );
+
+    if (navLabel) {
+      navLabel.textContent = `Q01—${total}`;
+    }
+
+    if (typeof window.applyQuizLanguage === "function") {
+    window.applyQuizLanguage();
+    }
+  }
+
+  window.renderQuestion = renderQuestion;
+
+  window.quizGoTo = index => {
+    if (!Number.isInteger(index) || index < 0 || index >= total) {
+      return;
+    }
+
+    current = index;
+    renderQuestion();
+  };
+
+  $("nextBtn").addEventListener("click", event => {
+    event.preventDefault();
+
+    if (answers[current] === undefined) {
+      $("hint").textContent =
+        "请先选择 A、B 或中立；没有正确答案。";
+      return;
+    }
+
+    if (current < total - 1) {
+      current++;
+      renderQuestion();
+      return;
+    }
+
+    if (typeof window.showResults === "function") {
+      window.showResults();
+    } else {
+      console.error("结果函数尚未加载：window.showResults");
+    }
+  });
+
+  $("prevBtn").addEventListener("click", () => {
+    if (current > 0) {
+      current--;
+      renderQuestion();
+    }
+  });
+
+  $("restartBtn").addEventListener("click", () => {
+    for (const key of Object.keys(answers)) {
+      delete answers[key];
+    }
+
+    current = 0;
+
+    $("resultPanel").style.display = "none";
+    $("hero").classList.remove("hidden");
+    $("quizLayout").classList.remove("hidden");
+
+    delete window.currentIdeologyResult;
+    delete window.currentScores;
+    delete window.currentSortedPrinciples;
+    delete window.currentResultTitle;
+    delete window.currentResultCategory;
+    delete window.currentSecondaryInfluences;
+    delete window.currentNeutralCounts;
+    delete window.currentDirectionalCounts;
+    delete window.currentPreferenceGraph;
+    delete window.currentCycles;
+
+    renderQuestion();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+  $("reviewBtn").addEventListener("click", () => {
+    const firstUnanswered = expandedQuestions.findIndex(
+      (_, i) => answers[i] === undefined
+    );
+
+    current = firstUnanswered >= 0 ? firstUnanswered : 0;
+
+    $("resultPanel").style.display = "none";
+    $("hero").classList.remove("hidden");
+    $("quizLayout").classList.remove("hidden");
+
+    renderQuestion();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+  renderQuestion();
+})();
+
+document.title='8PrincipalsCN|政治原则测试';
+document.querySelector('.brandname').textContent='8PrincipalsCN|政治原则测试';
+document.querySelector('.mark').innerHTML='<svg viewBox="0 0 48 48" width="30" height="30" aria-label="天平" role="img" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><path d="M24 7 28 24 24 41 20 24 24 7Z" fill="currentColor" stroke="none"/><path d="M10 16h28M24 12v24M13 16l-5 10m5-10 5 10M8 26a5 3 0 0 0 10 0M35 16l-5 10m5-10 5 10M30 26a5 3 0 0 0 10 0M18 39h12"/></svg>';
+</script>
+
+<script>
+
+window.showResults = function () {
+
+  const DATA = window.DATA;
+  const answers = window.answers;
+  const $ = window.$;
+
+  if (
+    !DATA ||
+    !Array.isArray(DATA.questions) ||
+    !Array.isArray(DATA.principles) ||
+    !answers ||
+    typeof window.renderQuestion !== 'function'
+  ) {
+    console.error('测试数据或答题模块尚未正确初始化。');
+    return;
+  }
+
+  const questions = DATA.questions;
+  const principles = DATA.principles;
+  const total = questions.length;
+
+  const missingIndex = questions.findIndex(
+    (_, index) => answers[index] === undefined
+  );
+
+  if (missingIndex !== -1) {
+    window.current = missingIndex;
+    window.renderQuestion();
+
+    const hint = $('hint');
+    if (hint) {
+      hint.textContent = '还有题目未作答，请选择 A、B 或中立。';
+    }
+    return;
+  }
+
+  const createCounts = () =>
+    Object.fromEntries(principles.map(p => [p, 0]));
+
+  const scores = createCounts();
+  const neutral = createCounts();
+  const directional = createCounts();
+  const preferredCounts = createCounts();
+  const deprioritizedCounts = createCounts();
+  const participation = createCounts();
+
+  const graph = Object.fromEntries(
+    principles.map(p => [p, new Set()])
+  );
+
+  let invalidQuestion = false;
+
+  questions.forEach((q, index) => {
+    const answer = answers[index];
+    const pair = q.pair;
+
+    if (
+      !Array.isArray(pair) ||
+      pair.length !== 2 ||
+      !principles.includes(pair[0]) ||
+      !principles.includes(pair[1]) ||
+      pair[0] === pair[1]
+    ) {
+      console.error('题目配置错误：', index, q);
+      invalidQuestion = true;
+      return;
+    }
+
+    if (!['A', 'B', 'N'].includes(answer)) {
+      console.error('答案无效：', index, answer);
+      invalidQuestion = true;
+      return;
+    }
+
+    const [a, b] = pair;
+
+    participation[a]++;
+    participation[b]++;
+
+    if (answer === 'N') {
+      neutral[a]++;
+      neutral[b]++;
+      return;
+    }
+
+    directional[a]++;
+    directional[b]++;
+
+    const preferred = answer === 'A' ? a : b;
+    const deprioritized = answer === 'A' ? b : a;
+
+    scores[preferred]++;
+    scores[deprioritized]--;
+
+    preferredCounts[preferred]++;
+    deprioritizedCounts[deprioritized]++;
+
+    graph[preferred].add(deprioritized);
+  });
+
+  if (invalidQuestion) {
+    alert('题目配置或答案存在异常，请检查控制台。');
+    return;
+  }
+
+  const invalidParticipation = principles.filter(
+    p => participation[p] !== 14
+  );
+
+  if (invalidParticipation.length) {
+    console.error(
+      '原则参与题数异常：',
+      Object.fromEntries(
+        invalidParticipation.map(p => [p, participation[p]])
+      )
+    );
+
+    alert('题目配置不完整，无法生成可靠结果。');
+    return;
+  }
+
+  const sorted = [...principles].sort(
+    (a, b) => scores[b] - scores[a]
+  );
+
+  const [top, second, third, fourth] = sorted;
+  const [s1, s2, s3, s4] = [
+    scores[top],
+    scores[second],
+    scores[third],
+    scores[fourth]
+  ];
+
+  const ideologyMap = {
+    '社会主义|自由主义': {
+      a: '自由意志社会主义',
+      equal: '自由主义社会主义',
+      b: '无政府主义'
+    },
+    '社会主义|民主主义': {
+      a: '民主社会主义（左翼）',
+      equal: '民主社会主义（右翼）',
+      b: '社会民主主义（左派）'
+    },
+    '社会主义|宗教主义': {
+      a: '社会主义（宗教派）',
+      equal: '宗教社会主义（左派）',
+      b: '宗教社会主义（右派）'
+    },
+    '社会主义|族群主义': {
+      a: '民族解放社会主义（左翼）',
+      equal: '民族解放社会主义（右翼）',
+      b: '社会民族主义'
+    },
+    '社会主义|权威主义': {
+      a: '先锋队社会主义',
+      equal: '权威社会主义',
+      b: '国家社会主义'
+    },
+    '社会主义|宪政主义': {
+      a: '社会主义（法制派）',
+      equal: '宪政社会主义',
+      b: '改良社会主义'
+    },
+    '社会主义|平等主义': {
+      a: '共产主义/无政府共产主义',
+      equal: '社会主义平等主义',
+      b: '平等主义/平权运动（左派）'
+    },
+
+    '自由主义|民主主义': {
+      a: '自由民主主义（自由派）',
+      equal: '自由民主主义（民主派）',
+      b: '民主自由主义'
+    },
+    '自由主义|宗教主义': {
+      a: '自由主义（宗教派）',
+      equal: '宗教民主主义（自由派）',
+      b: '宗教主义（自由派）'
+    },
+    '自由主义|族群主义': {
+      a: '公民民族主义（自由派）',
+      equal: '公民民族主义（民族自由派）',
+      b: '民族自由主义/民族主义（自由派）'
+    },
+    '自由主义|权威主义': {
+      a: '自由共和主义',
+      equal: '公民共和主义（自由派）',
+      b: '家长制自由主义'
+    },
+    '自由主义|宪政主义': {
+      a: '自由主义（法制派）',
+      equal: '自由宪政主义',
+      b: '宪政自由主义'
+    },
+    '自由主义|平等主义': {
+      a: '自由主义（左派）/个人无政府主义',
+      equal: '社会自由主义/平权运动（自由右派）',
+      b: '平等主义/平权运动（自由左派）'
+    },
+
+    '民主主义|宗教主义': {
+      a: '民主主义（宗教派）',
+      equal: '宗教民主主义（左翼）',
+      b: '宗教主义（民主派）'
+    },
+    '民主主义|族群主义': {
+      a: '公民民族主义（民主派）',
+      equal: '公民民族主义（民族民主派）',
+      b: '民族民主主义/民族主义（民主派）'
+    },
+    '民主主义|权威主义': {
+      a: '民主共和主义',
+      equal: '公民共和主义（民主派）',
+      b: '权威民主主义'
+    },
+    '民主主义|宪政主义': {
+      a: '民主主义（法制派）',
+      equal: '民主宪政主义',
+      b: '宪政民主主义'
+    },
+    '民主主义|平等主义': {
+      a: '社会民主主义（右派）',
+      equal: '社会民主主义（中右派）',
+      b: '社会民主主义（中左翼）/平权运动（民主派）'
+    },
+
+    '宪政主义|宗教主义': {
+      a: '宪政主义（宗教派）',
+      equal: '宗教宪政主义/政教合一',
+      b: '宗教主义（法制派）'
+    },
+    '宪政主义|族群主义': {
+      a: '宪政主义（民族派）',
+      equal: '宪法爱国主义',
+      b: '民族主义（法制派）'
+    },
+    '宪政主义|权威主义': {
+      a: '宪政主义（右派）',
+      equal: '宪政共和主义',
+      b: '权威主义/共和主义（法制派）'
+    },
+    '宪政主义|平等主义': {
+      a: '宪政主义（左派）',
+      equal: '法律平等主义',
+      b: '平等主义/平权运动（法制派）'
+    },
+
+    '平等主义|宗教主义': {
+      a: '平等主义/平权运动（宗教派）',
+      equal: '宗教平等主义',
+      b: '宗教主义（平等派）'
+    },
+    '平等主义|族群主义': {
+      a: '公民民族主义（左派）/平权运动（民族派）',
+      equal: '公民民族主义（民族左派）',
+      b: '民族主义（左派）'
+    },
+    '平等主义|权威主义': {
+      a: '新共和主义/平权运动（赋权派）',
+      equal: '公民共和主义（左派）',
+      b: '波拿巴主义'
+    },
+
+    '族群主义|权威主义': {
+      a: '民族主义（右派）',
+      equal: '右翼民粹主义/民族社会主义',
+      b: '民族社会主义/法西斯主义'
+    },
+    '族群主义|宗教主义': {
+      a: '民族主义（宗教派）',
+      equal: '宗教民族主义',
+      b: '宗教主义（民族派）'
+    },
+
+    '权威主义|宗教主义': {
+      a: '权威主义（宗教派）',
+      equal: '宗教民主主义',
+      b: '宗教主义（传统派）'
+    }
+  };
+
+  let resultTitle = '';
+  let resultCategory = '';
+  let resultExplanation = '';
+  let secondaryInfluences = [];
+
+  const isSinglePrincipleDominant = s1 >= 12 && s2 < 9;
+
+  const isMixed =
+    (s1 === s2 && s2 === s3 && s3 === s4) ||
+    (s1 - s4 <= 2);
+
+  if (isSinglePrincipleDominant) {
+
+    resultTitle = top;
+    resultCategory = '单一原则主导';
+
+    secondaryInfluences = sorted
+      .slice(1, 4)
+      .filter(p => scores[p] >= 7);
+
+    resultExplanation =
+      '第一名原则达到主导标准，因此以该原则作为主要政治倾向。' +
+      (
+        secondaryInfluences.length
+          ? ' 次要影响：' + secondaryInfluences.join('、') + '。'
+          : ' 按照本测试的阈值，没有符合条件的次要影响。'
+      );
+  } else if (isMixed) {
+
+    resultTitle = '实用主义/机会主义/杂糅主义';
+    resultCategory = '多原则混合';
+
+    resultExplanation =
+      '前四名原则得分全部相同，或第一名与第四名的分差不超过 2 分。' +
+      '因此不强行匹配单一流派名称。';
+  } else {
+
+    resultCategory = '组合主义';
+
+    const directKey = `${top}|${second}`;
+    const reverseKey = `${second}|${top}`;
+
+    let pairKey = null;
+
+    if (Object.prototype.hasOwnProperty.call(ideologyMap, directKey)) {
+      pairKey = directKey;
+    } else if (
+      Object.prototype.hasOwnProperty.call(ideologyMap, reverseKey)
+    ) {
+      pairKey = reverseKey;
+    }
+
+    const pairEntry = pairKey ? ideologyMap[pairKey] : null;
+
+    if (!pairEntry) {
+      resultTitle = '暂无明确对应的现成政治思想名称';
+    } else if (s1 === s2) {
+      resultTitle = pairEntry.equal;
+    } else {
+      const principleA = pairKey.split('|')[0];
+      resultTitle = top === principleA
+        ? pairEntry.a
+        : pairEntry.b;
+    }
+
+    secondaryInfluences = sorted
+      .slice(2, 4)
+      .filter(p => scores[p] >= 7);
+
+    resultExplanation =
+      '主要名称依据前两名原则的相对得分匹配，不代表完整思想体系的认定。' +
+      (
+        secondaryInfluences.length
+          ? ' 次要影响：' + secondaryInfluences.join('、') + '。'
+          : ' 按照本测试的阈值，没有符合条件的次要影响。'
+      );
+  }
+
+  $('winnerName').textContent = resultTitle;
+  $('winnerDesc').textContent = resultExplanation;
+
+  window.currentIdeologyResult = {
+    title: resultTitle,
+    category: resultCategory,
+    secondaryInfluences: [...secondaryInfluences],
+    scores: { ...scores },
+    sortedPrinciples: [...sorted],
+    neutralCounts: { ...neutral },
+    directionalCounts: { ...directional },
+    preferredCounts: { ...preferredCounts },
+    deprioritizedCounts: { ...deprioritizedCounts },
+    participation: { ...participation }
+  };
+
+  window.currentScores = { ...scores };
+  window.currentSortedPrinciples = [...sorted];
+  window.currentResultTitle = resultTitle;
+  window.currentResultCategory = resultCategory;
+  window.currentSecondaryInfluences = [...secondaryInfluences];
+  window.currentNeutralCounts = { ...neutral };
+  window.currentDirectionalCounts = { ...directional };
+  window.currentPreferenceGraph = Object.fromEntries(
+    principles.map(p => [p, [...graph[p]]])
+  );
+
+  const scoreSection = $('scores')?.closest('.resultsection');
+
+  if (scoreSection) {
+    scoreSection.classList.add('hidden');
+  }
+
+  document.getElementById('relativeRanking')?.remove();
+
+  const ranking = document.createElement('div');
+  ranking.id = 'relativeRanking';
+  ranking.className = 'resultsection';
+
+  const heading = document.createElement('h3');
+  heading.textContent = '整体态度';
+  ranking.appendChild(heading);
+
+  const note = document.createElement('p');
+  note.textContent =
+    '以下仅显示相对排序，反映你在具体冲突中对各原则的优先选择，' +
+    '不代表对原则本身作出客观评价。';
+  ranking.appendChild(note);
+
+  const list = document.createElement('div');
+  list.className = 'relative-list';
+
+  sorted.forEach((principle, index) => {
+    const row = document.createElement('div');
+    row.className = 'relative-row';
+
+    const rank = document.createElement('span');
+    rank.className = 'relative-index';
+    rank.textContent = String(index + 1).padStart(2, '0');
+
+    const name = document.createElement('span');
+    name.className = 'relative-name';
+    name.textContent = principle;
+
+    row.append(rank, name);
+
+    if (neutral[principle] > directional[principle]) {
+      const tag = document.createElement('span');
+      tag.className = 'stance-tag';
+      tag.textContent = '漠不关心';
+      row.appendChild(tag);
+    } else if (scores[principle] <= -6) {
+
+      const tag = document.createElement('span');
+      tag.className = 'stance-tag skeptical';
+      tag.textContent = '强烈质疑';
+      row.appendChild(tag);
+    }
+
+    if (index === 0) {
+      const tag = document.createElement('span');
+      tag.className = 'stance-tag leading';
+
+      tag.textContent =
+        directional[principle] > 0 &&
+        neutral[principle] <= 2 &&
+        scores[principle] === preferredCounts[principle]
+          ? '高度支持'
+          : '相对支持';
+
+      row.appendChild(tag);
+    }
+
+    list.appendChild(row);
+  });
+
+  ranking.appendChild(list);
+
+  const warning = document.createElement('div');
+  warning.id = 'contradictionNotice';
+  warning.className = 'caveat hidden';
+
+  const warningHeading = document.createElement('strong');
+  warningHeading.textContent = '偏好关系中出现循环';
+
+  const warningText = document.createElement('p');
+  warningText.textContent =
+    '你的选择中存在循环关系，例如 A 优先于 B、B 优先于 C，' +
+    '但 C 又优先于 A。循环可能反映不同情境下的取舍差异，' +
+    '也可能意味着某些原则难以形成稳定的线性排序。';
+
+  warning.append(warningHeading, warningText);
+
+  const cycles = [];
+  const seenCycles = new Set();
+
+  function canonicalCycle(cycle) {
+    const variants = cycle.map((_, index) =>
+      cycle.slice(index).concat(cycle.slice(0, index))
+    );
+
+    variants.sort((a, b) =>
+      a.join('|').localeCompare(b.join('|'))
+    );
+
+    return variants[0].join('|');
+  }
+
+  function findCycles(start, node, path, visited) {
+    for (const next of graph[node]) {
+      if (next === start && path.length > 1) {
+        const cycle = [...path];
+        const key = canonicalCycle(cycle);
+
+        if (!seenCycles.has(key)) {
+          seenCycles.add(key);
+          cycles.push(cycle);
+        }
+        continue;
+      }
+
+      if (
+        principles.indexOf(next) < principles.indexOf(start) ||
+        visited.has(next)
+      ) {
+        continue;
+      }
+
+      visited.add(next);
+      path.push(next);
+
+      findCycles(start, next, path, visited);
+
+      path.pop();
+      visited.delete(next);
+    }
+  }
+
+  for (const start of principles) {
+    findCycles(start, start, [start], new Set([start]));
+  }
+
+  window.currentCycles = cycles;
+
+  if (cycles.length) {
+    const details = document.createElement('p');
+
+    details.textContent =
+      '检测到的循环：' +
+      cycles
+        .slice(0, 4)
+        .map(cycle => cycle.concat(cycle[0]).join(' ＞ '))
+        .join('；') +
+      (cycles.length > 4 ? '；另有其他循环' : '');
+
+    warning.appendChild(details);
+    warning.classList.remove('hidden');
+  }
+
+  ranking.appendChild(warning);
+
+  if (scoreSection) {
+    scoreSection.after(ranking);
+  } else {
+    $('resultPanel').appendChild(ranking);
+  }
+
+  $('interpretation').textContent =
+    '排序反映你在题目所设定的具体冲突中，通常把哪些原则置于优先位置。' +
+    '得分是相对取舍的统计，不等于对某种原则的绝对赞成或反对。' +
+    '“漠不关心”表示涉及该原则的题目中，中立选择多于非中立选择；' +
+    '“强烈质疑”表示该原则得分不高，且在相关冲突中多次被置于其他原则之后。' +
+    '若出现偏好循环，说明这些原则之间未必能形成稳定的单向排序。' +
+    '本测试是简化的自我评估工具，不应替代对具体政治理论和制度的分析。';
+
+  $('hero').classList.add('hidden');
+  $('quizLayout').classList.add('hidden');
+  $('resultPanel').style.display = 'block';
+
+  if (typeof window.applyQuizLanguage === 'function') {
+    window.applyQuizLanguage();
+  }
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+
+(() => {
+  if (document.getElementById('relativeRankingStyle')) return;
+
+  const style = document.createElement('style');
+  style.id = 'relativeRankingStyle';
+
+  style.textContent = `
+    .relative-list {
+      display: grid;
+      gap: 7px;
+      margin-top: 14px;
+    }
+
+    .relative-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: var(--surface);
+    }
+
+    .relative-index {
+      min-width: 22px;
+      font-size: 12px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .relative-name {
+      flex: 1;
+      font-weight: 750;
+    }
+
+    .stance-tag {
+      padding: 3px 8px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .stance-tag.leading {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .stance-tag.skeptical {
+      color: #a13c32;
+      border-color: #a13c32;
+    }
+
+    #contradictionNotice {
+      margin-top: 16px;
+      border-color: var(--accent);
+      color: var(--text);
+    }
+
+    #contradictionNotice p {
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    @media (max-width: 520px) {
+      .relative-row {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .relative-name {
+        min-width: 45%;
+      }
+    }
+  `;
+
+  document.head.appendChild(style);
+})();
+</script>
+
+<script>
+
+(() => {
+  const button = document.getElementById('exportImageBtn');
+  if (!button || button.dataset.exportImageBound === 'true') return;
+
+  button.dataset.exportImageBound = 'true';
+
+  button.addEventListener('click', () => {
+
+    const traditional = document.documentElement.lang === 'zh-TW';
+    let canvasConverter = null;
+
+    const toCanvasText = text => {
+      const value = String(text ?? '');
+
+      if (!traditional) {
+        return value;
+      }
+
+      if (!window.OpenCC || typeof window.OpenCC.Converter !== 'function') {
+        console.error('OpenCC 未加载，无法生成繁体中文图片。');
+        return value;
+      }
+
+      if (!canvasConverter) {
+        canvasConverter = window.OpenCC.Converter({
+          from: 'cn',
+          to: 'tw'
+        });
+      }
+
+      return canvasConverter(value);
+    };
+
+    const result = window.currentIdeologyResult;
+
+    if (!result || !result.title) {
+      alert(toCanvasText('请先完成测试，再导出结果。'));
+      return;
+    }
+
+    const title = '8PrincipalsCN|政治原则测试';
+
+    const labels = {
+      subtitle: '政治原则测试结果',
+      core: '核心政治倾向',
+      support: '相对支持原则',
+      skeptical: '强烈质疑原则',
+      cycle: '非线性排序',
+      footer: '本结果仅反映本次测试中的相对取舍，不对各种原则的高低作价值判断'
+    };
+
+    const scores = result.scores || {};
+    const ordered = result.sortedPrinciples || Object.keys(scores);
+    const winner = result.title;
+
+    const support = result.category === '多原则混合'
+      ? []
+      : (result.secondaryInfluences || []).slice();
+
+    const skeptical = ordered.filter(p => Number(scores[p]) <= -6);
+
+    const sections = [
+      {
+        heading: labels.core,
+        items: [winner],
+        type: 'core'
+      }
+    ];
+
+    if (support.length) {
+      sections.push({
+        heading: labels.support,
+        items: support,
+        type: 'normal'
+      });
+    }
+
+    if (skeptical.length) {
+      sections.push({
+        heading: labels.skeptical,
+        items: skeptical,
+        type: 'normal'
+      });
+    }
+
+    const hasCycle = !!window.currentCycles?.length;
+
+    const width = 680;
+    const pad = 42;
+    const centerX = width / 2;
+
+    const titleHeight = 104;
+    const sectionGap = 25;
+    const headingHeight = 34;
+    const itemHeight = 43;
+    const cycleHeight = hasCycle ? 48 : 0;
+    const footerHeight = 76;
+
+    let height = titleHeight + 25;
+
+    for (const section of sections) {
+      height += sectionGap + headingHeight;
+      height += section.items.reduce((sum, item) => {
+        const displayItem = toCanvasText(item);
+        return sum + (displayItem.length > 20 ? itemHeight * 2 : itemHeight);
+      }, 0);
+    }
+
+    height += cycleHeight + footerHeight + 20;
+
+    const canvas = document.createElement('canvas');
+    canvas.width = width * 2;
+    canvas.height = height * 2;
+
+    const ctx = canvas.getContext('2d');
+
+    if (!ctx) {
+      alert(toCanvasText('图片导出失败，请重试。'));
+      return;
+    }
+
+    ctx.scale(2, 2);
+
+    ctx.fillStyle = '#f7fafc';
+    ctx.fillRect(0, 0, width, height);
+
+    ctx.fillStyle = '#1769aa';
+    ctx.fillRect(0, 0, 7, height);
+
+    ctx.strokeStyle = 'rgba(23, 105, 170, 0.075)';
+    ctx.lineWidth = 1;
+
+    for (let x = 30; x < width; x += 36) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, height);
+      ctx.stroke();
+    }
+
+    ctx.strokeStyle = 'rgba(23, 105, 170, 0.075)';
+
+    const ringCenterX = width / 2;
+    const ringCenterY = height / 2;
+
+    if (hasCycle) {
+      ctx.lineWidth = 15;
+
+      const radius = Math.min(
+        width * 0.43,
+        height * 0.42
+      );
+
+      ctx.beginPath();
+      ctx.arc(
+        ringCenterX,
+        ringCenterY,
+        radius,
+        0,
+        Math.PI * 2
+      );
+      ctx.stroke();
+    } else {
+      ctx.lineWidth = 5;
+
+      const maxRadius = Math.min(
+        width * 0.47,
+        height * 0.47
+      );
+
+      for (let radius = 65; radius <= maxRadius; radius += 42) {
+        ctx.beginPath();
+        ctx.arc(
+          ringCenterX,
+          ringCenterY,
+          radius,
+          0,
+          Math.PI * 2
+        );
+        ctx.stroke();
+      }
+    }
+
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    ctx.fillStyle = '#222222';
+    ctx.font = '700 27px sans-serif';
+    ctx.fillText(toCanvasText(title), centerX, 39);
+
+    ctx.fillStyle = '#666666';
+    ctx.font = '400 17px sans-serif';
+    ctx.fillText(toCanvasText(labels.subtitle), centerX, 78);
+
+    ctx.strokeStyle = '#dddddd';
+    ctx.beginPath();
+    ctx.moveTo(pad, 103);
+    ctx.lineTo(width - pad, 103);
+    ctx.stroke();
+
+    const wrapText = (text, maxWidth) => {
+      const lines = [];
+      let line = '';
+
+      for (const char of text) {
+        const candidate = line + char;
+
+        if (ctx.measureText(candidate).width > maxWidth && line) {
+          lines.push(line);
+          line = char;
+        } else {
+          line = candidate;
+        }
+      }
+
+      if (line) {
+        lines.push(line);
+      }
+
+      return lines;
+    };
+
+    let y = 126;
+
+    for (const section of sections) {
+      y += sectionGap;
+
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#444444';
+      ctx.font = '700 18px sans-serif';
+      ctx.fillText(toCanvasText(section.heading), centerX, y);
+
+      y += headingHeight;
+
+      for (const item of section.items) {
+        const displayItem = toCanvasText(item);
+        const maxTextWidth = width - pad * 2;
+        const fontSize = section.type === 'core' ? 28 : 21;
+
+        ctx.font = `${section.type === 'core' ? '700' : '600'} ${fontSize}px sans-serif`;
+        ctx.fillStyle = section.type === 'core' ? '#222222' : '#555555';
+
+        const lines = wrapText(displayItem, maxTextWidth);
+        const lineHeight = section.type === 'core' ? 35 : 27;
+
+        for (let i = 0; i < lines.length; i++) {
+          ctx.fillText(
+            lines[i],
+            centerX,
+            y + (i - (lines.length - 1) / 2) * lineHeight
+          );
+        }
+
+        y += Math.max(itemHeight, lines.length * lineHeight);
+      }
+    }
+
+    if (hasCycle) {
+      y += 18;
+
+      ctx.fillStyle = '#8a6d3b';
+      ctx.font = '600 16px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(toCanvasText(labels.cycle), centerX, y);
+
+      y += 30;
+    }
+
+    const footerY = height - 39;
+
+    ctx.strokeStyle = '#e2e2e2';
+    ctx.beginPath();
+    ctx.moveTo(pad, footerY - 22);
+    ctx.lineTo(width - pad, footerY - 22);
+    ctx.stroke();
+
+    ctx.fillStyle = '#777777';
+    ctx.font = '400 12px sans-serif';
+    ctx.textAlign = 'center';
+
+    const footerLines = wrapText(
+      toCanvasText(labels.footer),
+      width - pad * 2
+    );
+
+    footerLines.forEach((line, index) => {
+      ctx.fillText(
+        line,
+        centerX,
+        footerY + index * 16
+      );
+    });
+
+    canvas.toBlob(blob => {
+      if (!blob) {
+        alert(toCanvasText('图片导出失败，请重试。'));
+        return;
+      }
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+
+      link.href = url;
+      link.download = '8PrincipalsCN-政治原则测试结果.png';
+
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }, 'image/png');
+  });
+})();
+
+  </script>
+
+
+<script>
+(() => {
+  const intro = document.getElementById("introScreen");
+  const startButton = document.getElementById("startQuizBtn");
+  if (!intro || !startButton) return;
+
+  startButton.addEventListener("click", () => {
+    intro.classList.add("hidden");
+    document.getElementById("hero")?.classList.remove("hidden");
+    document.getElementById("quizLayout")?.classList.remove("hidden");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
+</script>
+
+</body></html>
