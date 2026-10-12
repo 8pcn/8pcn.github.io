@@ -1442,7 +1442,7 @@ window.showResults = function () {
     if (neutral[principle] > directional[principle]) {
       const tag = document.createElement('span');
       tag.className = 'stance-tag';
-      tag.textContent = '漠不关心';
+      tag.textContent = '态度模糊';
       row.appendChild(tag);
     } else if (scores[principle] <= -6) {
 
@@ -1563,7 +1563,7 @@ window.showResults = function () {
   $('interpretation').textContent =
     '排序反映你在题目所设定的具体冲突中，通常把哪些原则置于优先位置。' +
     '得分是相对取舍的统计，不等于对某种原则的绝对赞成或反对。' +
-    '“漠不关心”表示涉及该原则的题目中，中立选择多于非中立选择；' +
+    '“态度模糊”表示涉及该原则的题目中，中立选择多于非中立选择；' +
     '“强烈质疑”表示该原则得分不高，且在相关冲突中多次被置于其他原则之后。' +
     '若出现偏好循环，说明这些原则之间未必能形成稳定的单向排序。' +
     '本测试是简化的自我评估工具，不应替代对具体政治理论和制度的分析。';
